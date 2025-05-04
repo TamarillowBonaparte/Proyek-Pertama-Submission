@@ -1,3 +1,7 @@
+## Proyek Prediksi Harga Ethereum Menggunakan Machine Learning - MOCH. DANI SUGIARTO
+# Domain Proyek: Keuangan / FinTech (Financial Technology)
+Proyek ini berada dalam ranah Financial Technology dengan fokus pada analisis pasar aset kripto, khususnya prediksi harga Ethereum sebagai bagian dari aplikasi prediktif analytics untuk mendukung pengambilan keputusan investasi
+
 # Proyek-Pertama-Submission
 Penugasan Studi Kasus Pertama: Predictive Analytics
 # Business Understanding
