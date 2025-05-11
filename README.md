@@ -2,8 +2,8 @@
 # Domain Proyek: Keuangan / FinTech (Financial Technology)
 Proyek ini berada dalam ranah Financial Technology dengan fokus pada analisis pasar aset kripto, khususnya prediksi harga Ethereum sebagai bagian dari aplikasi prediktif analytics untuk mendukung pengambilan keputusan investasi
 
-# Proyek-Pertama-Submission
 Penugasan Studi Kasus Pertama: Predictive Analytics
+
 # Business Understanding
 Perkembangan teknologi blockchain telah membawa perubahan signifikan dalam sistem keuangan global, khususnya dalam hal aset digital seperti cryptocurrency. Salah satu aset kripto yang paling populer dan memiliki kapitalisasi pasar terbesar kedua setelah Bitcoin adalah Ethereum (ETH). Ethereum tidak hanya digunakan sebagai alat tukar digital, tetapi juga sebagai platform untuk membangun aplikasi terdesentralisasi (DApps) dan kontrak pintar (smart contracts), yang membuatnya memiliki nilai lebih dibandingkan dengan aset kripto lainnya.
 
