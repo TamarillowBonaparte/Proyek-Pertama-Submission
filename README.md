@@ -81,9 +81,6 @@ Menggunakan StandardScaler untuk standardisasi fitur.
 
 Membagi dataset menjadi 80% training dan 20% testing.
 
-3. Eksplorasi Data
-Visualisasi data dengan histogram.
-
 Korelasi antar fitur menggunakan heatmap.
 Split Dataset:
 
