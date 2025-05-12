@@ -48,7 +48,8 @@ Mengevaluasi performa model berdasarkan metrik R² Score, RMSE, dan MAE.
 Memilih model terbaik berdasarkan hasil evaluasi dan mempertimbangkan interpretabilitas dan kompleksitas.
 
 # Data Understanding
-Dataset yang digunakan adalah coin_Ethereum.csv yang berisi data harga harian Ethereum dari situs Kaggle - Cryptocurrency Historical Prices dengan total 1.776 baris dan 9 kolom fitur sebelum praproses seperti:
+Dataset yang digunakan adalah coin_Ethereum.csv yang berisi data harga harian Ethereum dari situs Dataset diambil dari [Kaggle - Cryptocurrency Historical Prices](https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory)
+dengan total 1.776 baris dan 9 kolom fitur sebelum praproses seperti:
 
 | Kolom       | Tipe Data | Deskripsi                                          |
 | ----------- | --------- | -------------------------------------------------- |
