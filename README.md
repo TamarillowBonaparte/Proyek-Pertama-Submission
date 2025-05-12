@@ -48,20 +48,30 @@ Mengevaluasi performa model berdasarkan metrik R² Score, RMSE, dan MAE.
 Memilih model terbaik berdasarkan hasil evaluasi dan mempertimbangkan interpretabilitas dan kompleksitas.
 
 # Data Understanding
-Dataset yang digunakan adalah coin_Ethereum.csv yang memuat informasi harian harga Ethereum, seperti:
+Dataset yang digunakan adalah coin_Ethereum.csv yang berisi data harga harian Ethereum dari situs Kaggle - Cryptocurrency Historical Prices dengan total 1.776 baris dan 9 kolom fitur sebelum praproses seperti:
 
-| Kolom       | Deskripsi                   |
-| ----------- | --------------------------- |
-| `Date`      | Tanggal data harga Ethereum |
-| `Open`      | Harga pembukaan             |
-| `High`      | Harga tertinggi             |
-| `Low`       | Harga terendah              |
-| `Close`     | Harga penutupan             |
-| `Volume`    | Volume transaksi            |
-| `Marketcap` | Kapitalisasi pasar          |
+| Kolom       | Tipe Data | Deskripsi                                          |
+| ----------- | --------- | -------------------------------------------------- |
+| `SNo`       | int64     | Nomor urut data                                    |
+| `Name`      | object    | Nama koin kripto, seluruhnya bernilai "Ethereum"   |
+| `Symbol`    | object    | Simbol dari koin, yaitu `ETH`                      |
+| `High`      | float64   | Harga tertinggi Ethereum dalam satu hari           |
+| `Low`       | float64   | Harga terendah Ethereum dalam satu hari            |
+| `Open`      | float64   | Harga saat pasar dibuka dalam satu hari            |
+| `Close`     | float64   | Harga saat pasar ditutup dalam satu hari           |
+| `Volume`    | float64   | Total volume perdagangan Ethereum dalam satu hari  |
+| `Marketcap` | float64   | Kapitalisasi pasar Ethereum (harga × total supply) |
 
 
-> Beberapa kolom seperti SNo, Name, Symbol, Volume, dan Marketcap dihapus karena tidak relevan untuk prediksi harga.
+📊 Kondisi Data:
+
+Missing Value: Tidak ditemukan nilai kosong (null) setelah data dibersihkan.
+
+Duplikat: Tidak ditemukan baris duplikat dalam data.
+
+Outlier: Outlier dideteksi menggunakan metode IQR (Interquartile Range) dan telah dihapus untuk menjaga kualitas data.
+
+Kolom Irrelevan: Kolom SNo, Name, Symbol, Volume, dan Marketcap dihapus karena tidak berkontribusi langsung terhadap prediksi harga dan bersifat redundan.
 
 # Proses Analisis Preparation
 1. Prapemrosesan Data
