@@ -139,12 +139,14 @@ Proses Pemodelan:
 - Menghitung metrik evaluasi untuk membandingkan performa
 
 # Evaluation
-Metrik Evaluasi:
-Metrik Evaluasi:
-R² Score: Mengukur seberapa besar variansi target dapat dijelaskan oleh model.
 
-Mean Squared Error (MSE): Mengukur rata-rata kuadrat selisih antara nilai prediksi dan aktual.
+Metrik Evaluasi:
 
+Untuk mengevaluasi performa model prediksi harga Ethereum, digunakan dua metrik utama:
+
+R² Score: Mengukur proporsi variansi harga aktual yang bisa dijelaskan oleh model. Semakin mendekati 1, semakin baik performa model.
+
+Mean Squared Error (MSE): Mengukur rata-rata dari kuadrat selisih antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin akurat model.
 📊 Hasil Evaluasi:
 | Model - MSE	|					Hasil R²						|
 | ----------- | --------------------------- |
@@ -152,7 +154,28 @@ Mean Squared Error (MSE): Mengukur rata-rata kuadrat selisih antara nilai predik
 | Random Forest - MSE: 7163.01 | R² Score: 0.7955|
 | AdaBoost - MSE: 6203.98 |  R² Score: 0.8229 |
 
-Model Random Forest memberikan performa terbaik dengan R² Score tertinggi dan MSE terendah.
+Meskipun KNN memiliki nilai R² tertinggi dan MSE paling rendah, perbedaan performa antar model relatif kecil, menunjukkan bahwa semua model cukup mampu menangkap pola historis dalam data harga Ethereum.
+
+---
+Keterkaitan dengan Business Understanding dan Problem Statement
+Model prediksi harga Ethereum ini dibangun untuk membantu investor dalam mengambil keputusan yang lebih informatif berdasarkan data historis (sesuai dengan tujuan dalam Business Understanding). Berdasarkan hasil evaluasi:
+
+Problem Statement 1: "Bagaimana cara mengolah data historis harga Ethereum agar dapat dieksplorasi dan dianalisis secara akurat?"
+
+✅ Sudah dijawab dengan tahapan preprocessing, penghapusan outlier, dan normalisasi fitur yang menghasilkan dataset bersih dan siap pakai untuk modeling.
+
+Problem Statement 2: "Algoritma machine learning apa yang paling efektif dalam memprediksi harga penutupan Ethereum berdasarkan data historis?"
+
+✅ Sudah dijawab melalui eksperimen dengan tiga algoritma (KNN, Random Forest, AdaBoost), dengan hasil bahwa KNN memberikan performa terbaik berdasarkan metrik evaluasi.
+
+Pencapaian Goals
+- Model berhasil dibangun untuk memprediksi harga Ethereum 30 hari ke depan dengan cukup baik.
+
+- Model KNN sebagai model terbaik telah menunjukkan kemampuan menjelaskan 82% variansi harga Ethereum, yang dapat membantu investor memitigasi risiko dalam pengambilan keputusan.
+
+- Evaluasi menunjukkan bahwa pendekatan berbasis machine learning memberikan prediksi yang lebih sistematis dan berbasis pola, sebagaimana direncanakan pada tahap awal proyek.
+
+Dengan demikian, seluruh solusi yang dirancang telah berdampak langsung terhadap tujuan utama proyek: memberikan wawasan prediktif bagi pengambilan keputusan investasi dalam aset kripto, khususnya Ethereum.
 
 # Kesimpulan
 Model XGBoost terbukti paling efektif dalam memprediksi harga penutupan Ethereum.
