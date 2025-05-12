@@ -149,7 +149,7 @@ Mean Squared Error (MSE): Mengukur rata-rata kuadrat selisih antara nilai predik
 | Model - MSE	|					Hasil R²						|
 | ----------- | --------------------------- |
 | KNN - MSE: 6100.06 | R² Score: 0.8259|
-| Random Forest - MSE: 6782.00 | R² Score: 0.8064|
+| Random Forest - MSE: 7163.01 | R² Score: 0.7955|
 | AdaBoost - MSE: 6203.98 |  R² Score: 0.8229 |
 
 Model Random Forest memberikan performa terbaik dengan R² Score tertinggi dan MSE terendah.
