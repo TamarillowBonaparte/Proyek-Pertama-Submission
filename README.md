@@ -100,21 +100,38 @@ Alasan: Tahapan ini dilakukan untuk memastikan bahwa data yang digunakan untuk p
 
 # Modeling
 Algoritma yang Digunakan:
-Linear Regression
+1. Linear Regression
+Model baseline yang mengasumsikan hubungan linear antara fitur dan target. Tidak digunakan dalam model utama, namun relevan sebagai acuan awal performa prediksi. (Tidak digunakan dalam notebook, hanya disebut sebagai baseline)
 
-Model baseline dengan asumsi linearitas
+2. K-Nearest Neighbors Regressor (KNN)
 
-K-Nearest Neighbors Regressor
+Cara kerja: Model prediksi berdasarkan rata-rata target dari k tetangga terdekat dalam ruang fitur. Cocok untuk data non-linear.
 
-- Model berbasis jarak, cocok untuk dataset yang tidak linear
+Parameter utama:
 
-Random Forest Regressor
+n_neighbors=10
 
-- Model ensemble berbasis pohon, kuat terhadap overfitting
+Parameter lainnya menggunakan default.
 
-Gradient Boosting (XGBoost)
+3. Random Forest Regressor
 
-- Model boosting yang kuat dalam menangkap pola kompleks
+Cara kerja: Model ensemble yang membentuk banyak pohon keputusan dan menggabungkan hasil prediksi rata-rata dari semua pohon. Stabil terhadap overfitting dan menangani fitur non-linear dengan baik.
+
+Parameter utama:
+
+Versi awal: n_estimators=50, max_depth=16, random_state=42
+
+Versi final yang digunakan: n_estimators=200, max_depth=10, random_state=42
+
+4. AdaBoost Regressor
+
+Cara kerja: Model boosting yang membentuk model secara bertahap, di mana setiap model baru memfokuskan pada kesalahan dari model sebelumnya.
+
+Parameter utama:
+
+n_estimators=50, learning_rate=0.05, random_state=42
+
+Model ini meningkatkan akurasi dengan menggabungkan banyak prediktor lemah menjadi satu model kuat.
 
 Proses Pemodelan:
 - Melatih setiap model pada dataset training
