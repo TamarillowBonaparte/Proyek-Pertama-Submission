@@ -13,9 +13,9 @@ Salah satu pendekatan yang potensial untuk mengatasi tantangan ini adalah penggu
 
 Proyek ini memiliki dua tujuan utama yang sejalan dengan problem statements yang diajukan:
 
-Mengolah dan menganalisis data historis harga Ethereum untuk menghasilkan representasi data yang siap dipakai dalam konteks prediksi.
+- Mengolah dan menganalisis data historis harga Ethereum untuk menghasilkan representasi data yang siap dipakai dalam konteks prediksi.
 
-Membangun dan membandingkan kinerja beberapa algoritma machine learning untuk memprediksi harga penutupan Ethereum secara akurat.
+- Membangun dan membandingkan kinerja beberapa algoritma machine learning untuk memprediksi harga penutupan Ethereum secara akurat.
 
 Dengan pendekatan ini, model yang dihasilkan diharapkan mampu memberikan estimasi harga jangka pendek (30 hari ke depan) yang dapat dijadikan referensi dalam pengambilan keputusan investasi pada aset kripto, khususnya Ethereum.
 # Problem Statements
