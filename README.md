@@ -1,24 +1,23 @@
-## Proyek Prediksi Harga Ethereum Menggunakan Machine Learning - MOCH. DANI SUGIARTO
-# Domain Proyek: Keuangan / FinTech (Financial Technology)
-Proyek ini berada dalam ranah Financial Technology dengan fokus pada analisis pasar aset kripto, khususnya prediksi harga Ethereum sebagai bagian dari aplikasi prediktif analytics untuk mendukung pengambilan keputusan investasi
+## Proyek Machine Learning Prediksi-Harga Ethereum Menggunakan Machine Learning - MOCH. DANI SUGIARTO
+# Domain Proyek
+Domain proyek yang dipilih dalam proyek machine learning ini adalah keuangan dan cryptocurrency, dengan fokus pada analisis pasar aset kripto. Judul proyek ini adalah "Ethereum Price Predictive Analytics", yang bertujuan mengembangkan aplikasi predictive analytics untuk mendukung pengambilan keputusan investasi.
 
 Penugasan Studi Kasus Pertama: Predictive Analytics
 
 # Business Understanding
-Perkembangan teknologi blockchain telah membawa perubahan signifikan dalam sistem keuangan global, khususnya dalam hal aset digital seperti cryptocurrency. Salah satu aset kripto yang paling populer dan memiliki kapitalisasi pasar terbesar kedua setelah Bitcoin adalah Ethereum (ETH). Ethereum tidak hanya digunakan sebagai alat tukar digital, tetapi juga sebagai platform untuk membangun aplikasi terdesentralisasi (DApps) dan kontrak pintar (smart contracts), yang membuatnya memiliki nilai lebih dibandingkan dengan aset kripto lainnya.
+Perkembangan teknologi blockchain telah membawa perubahan besar dalam sistem keuangan global, terutama dalam hal aset digital seperti cryptocurrency. Salah satu aset kripto yang paling menonjol adalah Ethereum (ETH), yang memiliki kapitalisasi pasar terbesar kedua setelah Bitcoin. Ethereum tidak hanya berfungsi sebagai alat tukar digital, tetapi juga sebagai platform utama untuk pengembangan aplikasi terdesentralisasi (DApps) dan kontrak pintar (smart contracts), menjadikannya aset yang memiliki nilai fungsional lebih dibandingkan kripto lainnya.
 
-Namun, seperti halnya dengan aset digital lainnya, harga Ethereum sangat fluktuatif dan dipengaruhi oleh berbagai faktor, baik dari aspek teknis maupun sentimen pasar. Fluktuasi harga ini dapat menjadi tantangan bagi investor dan trader dalam mengambil keputusan investasi. Oleh karena itu, dibutuhkan suatu pendekatan yang dapat membantu memprediksi pergerakan harga Ethereum secara lebih akurat untuk mendukung pengambilan keputusan investasi yang lebih tepat.
+Namun demikian, harga Ethereum sangat fluktuatif dan dipengaruhi oleh berbagai faktor, mulai dari tren pasar, volume transaksi, hingga sentimen global. Volatilitas ini menciptakan tantangan besar bagi investor dan trader dalam membuat keputusan investasi yang tepat waktu dan berbasis data. Oleh karena itu, dibutuhkan pendekatan yang mampu menganalisis data historis harga Ethereum secara sistematis dan menghasilkan prediksi harga yang akurat.
 
-Dalam konteks ini, penerapan teknik machine learning dapat menjadi solusi yang menjanjikan. Dengan memanfaatkan data historis harga Ethereum dan teknik pembelajaran mesin seperti K-Nearest Neighbor (KNN), Random Forest, dan AdaBoost, prediksi harga dapat dilakukan secara lebih sistematis dan berdasarkan pola data yang ada.
+Salah satu pendekatan yang potensial untuk mengatasi tantangan ini adalah penggunaan machine learning. Dengan algoritma seperti K-Nearest Neighbor (KNN), Random Forest, dan AdaBoost, model prediksi dapat dilatih menggunakan data historis untuk mengenali pola dan tren yang relevan.
 
-Proyek ini bertujuan untuk membangun model prediksi harga Ethereum dalam jangka pendek, yaitu selama 30 hari ke depan, menggunakan algoritma-algoritma tersebut. Model ini diharapkan dapat memberikan gambaran estimasi harga yang lebih akurat sehingga dapat digunakan sebagai acuan dalam strategi investasi aset kripto, khususnya Ethereum.
-– [Nama Anda]
-📂 Domain Proyek: Prediksi Harga Ethereum dengan Machine Learning
-📌 Latar Belakang
-Dalam beberapa tahun terakhir, cryptocurrency seperti Ethereum telah menjadi aset investasi yang sangat diminati. Volatilitas harganya yang tinggi membuat banyak investor dan trader mencoba memanfaatkan analisis data historis untuk melakukan prediksi harga di masa depan. Oleh karena itu, pendekatan berbasis machine learning sangat potensial untuk membantu memberikan insight dan prediksi harga secara lebih akurat.
+Proyek ini memiliki dua tujuan utama yang sejalan dengan problem statements yang diajukan:
 
-Prediksi harga Ethereum menjadi tantangan menarik karena dipengaruhi oleh banyak faktor seperti permintaan pasar, volume transaksi, dan tren historis. Berdasarkan laporan dari Investopedia, Ethereum merupakan aset kedua terbesar setelah Bitcoin dengan volume perdagangan yang tinggi, sehingga akurasi prediksi harga dapat memberikan dampak signifikan pada pengambilan keputusan investasi.
+Mengolah dan menganalisis data historis harga Ethereum untuk menghasilkan representasi data yang siap dipakai dalam konteks prediksi.
 
+Membangun dan membandingkan kinerja beberapa algoritma machine learning untuk memprediksi harga penutupan Ethereum secara akurat.
+
+Dengan pendekatan ini, model yang dihasilkan diharapkan mampu memberikan estimasi harga jangka pendek (30 hari ke depan) yang dapat dijadikan referensi dalam pengambilan keputusan investasi pada aset kripto, khususnya Ethereum.
 # Problem Statements
 - Bagaimana cara mengolah data historis harga Ethereum agar dapat dieksplorasi dan dianalisis secara akurat dalam konteks prediksi harga?
 
