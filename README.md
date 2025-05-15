@@ -91,13 +91,44 @@ dengan total 2160 baris dan 9 kolom fitur sebelum praproses seperti:
 
 📊 Kondisi Data:
 
-Missing Value: Tidak ditemukan nilai kosong (null) setelah data dibersihkan.
+1. Missing Value (Nilai Kosong)
+Tidak ada nilai kosong (null) di seluruh dataset.
+Semua kolom memiliki data lengkap dari awal hingga akhir.
 
-Duplikat: Tidak ditemukan baris duplikat dalam data.
+3. Duplikasi Data
+Tidak ditemukan baris duplikat dalam dataset.
+Setiap baris merepresentasikan data harian unik tanpa pengulangan.
 
-Outlier: Outlier dideteksi menggunakan metode IQR (Interquartile Range) dan telah dihapus untuk menjaga kualitas data.
+5. Outlier
+Terdapat outlier pada fitur numerik seperti High, Low, Open, dan Close.
+Outlier dideteksi menggunakan metode IQR (Interquartile Range) .
+Outlier telah dihapus untuk meningkatkan kualitas model prediksi.
 
-Kolom Irrelevan: Kolom SNo, Name, Symbol, Volume, dan Marketcap dihapus karena tidak berkontribusi langsung terhadap prediksi harga dan bersifat redundan.
+7. Kolom Irrelevan
+Beberapa kolom dianggap tidak relevan untuk prediksi harga Ethereum:
+
+- SNo: Nomor urut baris (tidak informatif).
+- Name: Semua nilai adalah "Ethereum".
+- Symbol: Semua nilai adalah "ETH".
+- Volume: Meskipun penting secara finansial, tidak digunakan dalam model ini.
+- Marketcap: Dianggap redundan karena merupakan fungsi dari harga dan pasokan.
+
+Kolom-kolom tersebut telah dihapus , sehingga hanya tersisa:
+
+- Date
+- High
+- Low
+- Open
+- Close
+
+5. Fitur Baru
+Ditambahkan fitur baru:
+
+OHLC_Average: Rata-rata dari Open, High, Low, dan Close sebagai representasi harga harian.
+
+6. Target Prediksi
+Dibuat kolom target: Price_After_Month → harga Close setelah 30 hari (shift(-30)).
+Beberapa baris terakhir dihapus karena mengandung nilai NaN.
 
 # Proses Analisis Preparation
 1. Prapemrosesan Data
@@ -176,11 +207,16 @@ Mean Squared Error (MSE): Mengukur rata-rata dari kuadrat selisih antara nilai p
 | Model - MSE	|					Hasil R²						|
 | ----------- | --------------------------- |
 | KNN - MSE: 6100.06 | R² Score: 0.8259|
-| Random Forest - MSE: 7163.01 | R² Score: 0.7955|
+| Random Forest - MSE (Default): 7163.01 | R² Score: 0.7955|
+| Random Forest - MSE (Tuned): 6782.00 | R² Score: 0.8064 |
 | AdaBoost - MSE: 6203.98 |  R² Score: 0.8229 |
 
+Penjelasan pada tabel :
+- Model Random Forest pertama (Random Forest Default) menggunakan parameter bawaan scikit-learn seperti n_estimators=100 dan max_depth=None.
+- Untuk meningkatkan performa, dilakukan tuning hyperparameter, menghasilkan model Random Forest kedua (Random Forest Tuned) dengan konfigurasi n_estimators=200, max_depth=10, dan random_state=42. Model ini menunjukkan peningkatan signifikan dalam akurasi prediksi.
+- KNN tetap menjadi model dengan performa terbaik berdasarkan MSE terendah dan R² tertinggi.
+- Namun, Random Forest yang ditune memberikan hasil yang sangat kompetitif dan bahkan sedikit lebih baik daripada KNN dalam hal R² Score.
 Meskipun KNN memiliki nilai R² tertinggi dan MSE paling rendah, perbedaan performa antar model relatif kecil, menunjukkan bahwa semua model cukup mampu menangkap pola historis dalam data harga Ethereum.
-
 ---
 Keterkaitan dengan Business Understanding dan Problem Statement
 Model prediksi harga Ethereum ini dibangun untuk membantu investor dalam mengambil keputusan yang lebih informatif berdasarkan data historis (sesuai dengan tujuan dalam Business Understanding). Berdasarkan hasil evaluasi:
