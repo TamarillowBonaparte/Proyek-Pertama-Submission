@@ -1,23 +1,48 @@
 ## Proyek Machine Learning Prediksi-Harga Ethereum Menggunakan Machine Learning - MOCH. DANI SUGIARTO
-# Domain Proyek
-Domain proyek yang dipilih dalam proyek machine learning ini adalah keuangan dan cryptocurrency, dengan fokus pada analisis pasar aset kripto. Judul proyek ini adalah "Ethereum Price Predictive Analytics", yang bertujuan mengembangkan aplikasi predictive analytics untuk mendukung pengambilan keputusan investasi.
 
 Penugasan Studi Kasus Pertama: Predictive Analytics
+# Domain Proyek
+
+Domain proyek yang dipilih dalam proyek machine learning ini adalah keuangan dan cryptocurrency , dengan fokus pada analisis prediktif harga Ethereum (ETH). Judul proyek ini adalah "Analisis dan Prediksi Harga Ethereum Menggunakan Machine Learning" . Tujuan utamanya adalah untuk mengembangkan model prediktif berbasis algoritma machine learning yang dapat membantu investor dan pengguna dalam membuat keputusan investasi berbasis data.
+
+# Latar Belakang Masalah
+
+Perkembangan teknologi blockchain telah membawa perubahan besar dalam sistem keuangan global, salah satunya melalui munculnya aset digital seperti Ethereum (ETH) . Ethereum merupakan platform terdesentralisasi yang mendukung kontrak pintar (smart contracts ) dan aplikasi terdesentralisasi (DApps ), menjadikannya lebih dari sekadar mata uang digital. Sebagai aset kripto dengan kapitalisasi pasar terbesar kedua setelah Bitcoin, Ethereum banyak digunakan dalam transaksi digital, DeFi, NFT, dan berbagai ekosistem Web3.
+
+Namun, Ethereum memiliki sifat volatilitas tinggi , di mana harganya bisa berubah secara signifikan dalam waktu singkat karena berbagai faktor seperti:
+
+- Pergerakan pasar crypto secara umum
+- Volume perdagangan harian
+- Regulasi pemerintah
+- Sentimen media sosial dan berita
+- Kondisi makroekonomi global
+- Volatilitas ini memberikan peluang sekaligus risiko bagi investor. Oleh karena itu, dibutuhkan pendekatan prediktif yang akurat untuk memahami tren harga dan mengurangi ketidakpastian dalam pengambilan keputusan investasi.
+
+Penugasan Studi Kasus: Predictive Analytics
+Proyek ini menggunakan pendekatan predictive analytics berbasis machine learning untuk memprediksi harga penutupan Ethereum (Close Price) 30 hari ke depan berdasarkan data historis. Dengan memanfaatkan fitur-fitur seperti Open, High, Low, Close, Volume, dan Marketcap, proyek ini bertujuan untuk:
+
+1. Memproses dan mempersiapkan dataset Ethereum untuk analisis prediktif.
+2. Membangun dan membandingkan beberapa model regresi machine learning (KNN, Random Forest, AdaBoost, Gradient Boosting).
+3. Menghasilkan prediksi harga Ethereum 30 hari ke depan yang dapat digunakan sebagai referensi investasi.
 
 # Business Understanding
 Perkembangan teknologi blockchain telah membawa perubahan besar dalam sistem keuangan global, terutama dalam hal aset digital seperti cryptocurrency. Salah satu aset kripto yang paling menonjol adalah Ethereum (ETH), yang memiliki kapitalisasi pasar terbesar kedua setelah Bitcoin. Ethereum tidak hanya berfungsi sebagai alat tukar digital, tetapi juga sebagai platform utama untuk pengembangan aplikasi terdesentralisasi (DApps) dan kontrak pintar (smart contracts), menjadikannya aset yang memiliki nilai fungsional lebih dibandingkan kripto lainnya.
 
 Namun demikian, harga Ethereum sangat fluktuatif dan dipengaruhi oleh berbagai faktor, mulai dari tren pasar, volume transaksi, hingga sentimen global. Volatilitas ini menciptakan tantangan besar bagi investor dan trader dalam membuat keputusan investasi yang tepat waktu dan berbasis data. Oleh karena itu, dibutuhkan pendekatan yang mampu menganalisis data historis harga Ethereum secara sistematis dan menghasilkan prediksi harga yang akurat.
 
-Salah satu pendekatan yang potensial untuk mengatasi tantangan ini adalah penggunaan machine learning. Dengan algoritma seperti K-Nearest Neighbor (KNN), Random Forest, dan AdaBoost, model prediksi dapat dilatih menggunakan data historis untuk mengenali pola dan tren yang relevan.
+Salah satu pendekatan yang potensial untuk mengatasi tantangan ini adalah penggunaan machine learning. Dengan algoritma seperti K-Nearest Neighbor (KNN), Random Forest, dan AdaBoost, model prediksi dapat dilatih menggunakan data historis untuk mengenali pola dan tren yang relevan. Berdasarkan latar belakang di atas, masalah utama yang ingin diselesaikan dalam proyek ini adalah:
 
-Proyek ini memiliki dua tujuan utama yang sejalan dengan problem statements yang diajukan:
+Untuk menjawab pertanyaan tersebut, proyek ini menetapkan tiga tujuan utama yang selaras dengan problem statement:
 
-- Mengolah dan menganalisis data historis harga Ethereum untuk menghasilkan representasi data yang siap dipakai dalam konteks prediksi.
+1. Memproses dan menganalisis data historis Ethereum untuk menghasilkan representasi data yang siap digunakan dalam konteks prediksi harga.
+Termasuk normalisasi data, deteksi outlier, feature engineering (seperti OHLC rata-rata), dan pembentukan target prediksi (Price_After_Month).
 
-- Membangun dan membandingkan kinerja beberapa algoritma machine learning untuk memprediksi harga penutupan Ethereum secara akurat.
+2. Membangun dan melatih beberapa model regresi machine learning (KNN, Random Forest, AdaBoost, Gradient Boosting) menggunakan data yang telah diproses.
+Setiap model dilatih dan dievaluasi menggunakan metrik seperti MSE dan R² Score untuk memastikan performa prediksi.
 
-Dengan pendekatan ini, model yang dihasilkan diharapkan mampu memberikan estimasi harga jangka pendek (30 hari ke depan) yang dapat dijadikan referensi dalam pengambilan keputusan investasi pada aset kripto, khususnya Ethereum.
+3. Melakukan prediksi harga Ethereum 30 hari ke depan berdasarkan model terbaik.
+Hasil prediksi dapat digunakan sebagai referensi awal dalam pengambilan keputusan investasi atau trading.
+
 # Problem Statements
 - Bagaimana cara mengolah data historis harga Ethereum agar dapat dieksplorasi dan dianalisis secara akurat dalam konteks prediksi harga?
 
@@ -49,7 +74,7 @@ Memilih model terbaik berdasarkan hasil evaluasi dan mempertimbangkan interpreta
 
 # Data Understanding
 Dataset yang digunakan adalah coin_Ethereum.csv yang berisi data harga harian Ethereum dari situs Dataset diambil dari [Kaggle - Cryptocurrency Historical Prices](https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory)
-dengan total 1.776 baris dan 9 kolom fitur sebelum praproses seperti:
+dengan total 2160 baris dan 9 kolom fitur sebelum praproses seperti:
 
 | Kolom       | Tipe Data | Deskripsi                                          |
 | ----------- | --------- | -------------------------------------------------- |
